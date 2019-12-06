@@ -1,8 +1,8 @@
 # i2cbitbang
-Recently I needed bit-bang i2c for creating SCCB communication which is slightly different from i2c as it has ACK bit as Don't care bit. Since I cound't find any lib for my needs, I wrote my own one in C++.
-This is bit-banging version of i2c for STM32F4 with possibility to create many i2c ports (limited by GPIO number). It supports clock stretching and different speeds according to standards.
-It can be easily adopted to other STM32 microcontrollers.
-This lib uses Delay class which is based on DWT timer in STM.
+Recently I needed bit-bang i2c for creating SCCB communication which is slightly different from i2c as it has ACK bit as Don't care bit. Since I cound't find any lib for my needs, I wrote my own one in C++. It is based on i2c template from https://en.wikipedia.org/wiki/I%C2%B2C.
+This is bit-banging version of i2c for STM32F4 with possibility to create many i2c ports (limited by GPIO number). It supports clock stretching and different speeds according to standards. It does not support arbitration lost, but it can be easily added by yourself.
+It can be easily adopted to other STM32 microcontrollers. This lib uses Delay class which is based on DWT timer available in STMs.
+
 <p><b>Instruction</b></P>
 
 1. Edit <code>i2cbitbang_board.h</code> file and specify your i2c ports
